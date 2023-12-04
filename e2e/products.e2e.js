@@ -32,7 +32,7 @@ describe('tests for /products path', () => {
       const { statusCode, body } = await api.get(
         `/api/v1/products?limit=${limit}&offset=${offset}`
       );
-      expect(statusCode).toEqual(200);
+      expect(statusCode).toEqual(400);
       expect(body.length).toEqual(2);
       expect(body[0].category).toBeTruthy();
     });
